@@ -22,6 +22,6 @@ app.get('/checking', (req, res) => res.render('account', { account: accounts.che
 app.get('/credit', (req, res) => res.render('account', { account: accounts.credit }));
 
 app.get('/profile', (req, res) =>  res.render('profile', { user: users[0] }));
-
+}));
 app.listen(3000, () => { console.log('PS Project Running on port 3000!') });
 
