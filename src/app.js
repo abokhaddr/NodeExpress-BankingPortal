@@ -25,9 +25,10 @@ app.get('/credit', (req, res) => res.render('account', { account: accounts.credi
 app.get('/transfer', (req, res) =>  res.render('transfer'));
 
 app.post('/transfer', (req, res) => {
-    accounts[req.body.from].balance -= req.body.amount;
-    accounts[req.body.to].balance += parseInt(req.body.amount, 10);
-    let accountsJSON = JSON.stringify(accounts, null, 4)
+    accounts[req.body.from].balance = accounts[req.body.from]-req.body.amount    ;
+   accounts[req.body.to].balance = parselnt(accounts[req.body.from].balance) + parselnt (req.body.amount, 10) ;
+    
+    const  accountsJSON = JSON.stringify(accounts, null, 4);
     fs.writeFileSync(path.join(__dirname, 'json','accounts.json'), accountsJSON, 'utf8');
     res.render('transfer', {message: 'Transfer Completed'});
 });
