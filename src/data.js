@@ -16,4 +16,4 @@ module.exports = {
   accounts,
   users,
   writeJSON
-}; 
+};
