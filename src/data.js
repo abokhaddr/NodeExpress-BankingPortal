@@ -11,8 +11,9 @@ const writeJSON = () => {
     let accountsJSON = JSON.stringify(accounts, null, 4)
     fs.writeFileSync(path.join(__dirname, 'json','accounts.json'), accountsJSON, 'utf8');
 }
+
 module.exports = {
   accounts,
   users,
   writeJSON
-};
+}; 
