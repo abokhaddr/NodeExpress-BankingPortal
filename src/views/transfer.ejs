@@ -5,15 +5,17 @@
   <% } %>
   <span class="error"></span>
 
-  <form id="transferForm" action='/transfer' method='post'>
+  <form id="transferForm">
+  <form id="transferForm" action='/services/transfer' method='post'>
     <span>Transfer From: </span> 
-  
-    <select  name='from' id='from' required>
+    <select required>
+    <select required name='from' id='from'>
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>
     <span> to: </span>
-    <select  name='to' id='to'required>
+    <select required>
+    <select required name='to' id='to'>
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>
